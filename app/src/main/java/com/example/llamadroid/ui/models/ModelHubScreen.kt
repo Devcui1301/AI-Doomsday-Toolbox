@@ -1,0 +1,183 @@
+package com.example.llamadroid.ui.models
+
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Create
+import androidx.compose.material.icons.filled.Star
+import androidx.compose.material3.*
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
+import com.example.llamadroid.R
+import com.example.llamadroid.ui.navigation.Screen
+
+/**
+ * Model Hub - Landing page for model management
+ * Allows users to choose between LlamaCpp, Stable Diffusion, and Whisper models
+ */
+@Composable
+fun ModelHubScreen(navController: NavController) {
+    val scrollState = rememberScrollState()
+    
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(
+                brush = Brush.verticalGradient(
+                    colors = listOf(
+                        MaterialTheme.colorScheme.surface,
+                        MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.3f)
+                    )
+                )
+            )
+            .verticalScroll(scrollState)
+            .padding(20.dp)
+    ) {
+        // Header
+        Text(
+            stringResource(R.string.models_hub),
+            style = MaterialTheme.typography.headlineLarge.copy(
+                fontWeight = FontWeight.Bold,
+                fontSize = 32.sp
+            )
+        )
+        Text(
+            stringResource(R.string.settings_subtitle),
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+        
+        Spacer(modifier = Modifier.height(32.dp))
+        
+        // LlamaCpp Models Card
+        ModelFeatureCard(
+            title = "🤖 " + stringResource(R.string.models_llm),
+            description = stringResource(R.string.models_llm_desc),
+            icon = Icons.Default.Star,
+            gradientColors = listOf(
+                MaterialTheme.colorScheme.primary.copy(alpha = 0.15f),
+                MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f)
+            ),
+            onClick = { navController.navigate(Screen.LLMModels.route) }
+        )
+        
+        Spacer(modifier = Modifier.height(16.dp))
+        
+        // SD Models Card
+        ModelFeatureCard(
+            title = "🎨 " + stringResource(R.string.models_sd),
+            description = stringResource(R.string.models_sd_desc),
+            icon = Icons.Default.Create,
+            gradientColors = listOf(
+                MaterialTheme.colorScheme.secondary.copy(alpha = 0.15f),
+                MaterialTheme.colorScheme.secondaryContainer.copy(alpha = 0.3f)
+            ),
+            onClick = { navController.navigate(Screen.SDModels.route) }
+        )
+        
+        Spacer(modifier = Modifier.height(16.dp))
+        
+        // Whisper Models Card
+        ModelFeatureCard(
+            title = "🎙️ " + stringResource(R.string.models_whisper),
+            description = stringResource(R.string.models_whisper_desc),
+            icon = Icons.Default.Create,
+            gradientColors = listOf(
+                Color(0xFF00BCD4).copy(alpha = 0.15f),
+                Color(0xFF00ACC1).copy(alpha = 0.3f)
+            ),
+            onClick = { navController.navigate(Screen.WhisperModels.route) }
+        )
+        
+        Spacer(modifier = Modifier.height(16.dp))
+        
+        // Share Models Card
+        ModelFeatureCard(
+            title = "📤 " + stringResource(R.string.models_share),
+            description = stringResource(R.string.models_share_desc),
+            icon = Icons.Default.Star,
+            gradientColors = listOf(
+                Color(0xFF4CAF50).copy(alpha = 0.15f),
+                Color(0xFF388E3C).copy(alpha = 0.3f)
+            ),
+            onClick = { navController.navigate("model_share") }
+        )
+        
+        Spacer(modifier = Modifier.height(32.dp))
+        
+        // Info text
+        Text(
+            stringResource(R.string.models_local_storage),
+            style = MaterialTheme.typography.bodySmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f),
+            modifier = Modifier.align(Alignment.CenterHorizontally)
+        )
+    }
+}
+
+@Composable
+private fun ModelFeatureCard(
+    title: String,
+    description: String,
+    icon: ImageVector,
+    gradientColors: List<androidx.compose.ui.graphics.Color>,
+    onClick: () -> Unit
+) {
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable(onClick = onClick),
+        shape = RoundedCornerShape(20.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.surface
+        ),
+        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(
+                    brush = Brush.horizontalGradient(gradientColors)
+                )
+                .padding(24.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Icon(
+                imageVector = icon,
+                contentDescription = null,
+                modifier = Modifier.size(48.dp),
+                tint = MaterialTheme.colorScheme.primary
+            )
+            
+            Spacer(modifier = Modifier.width(20.dp))
+            
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    title,
+                    style = MaterialTheme.typography.titleLarge.copy(
+                        fontWeight = FontWeight.SemiBold
+                    )
+                )
+                Spacer(modifier = Modifier.height(4.dp))
+                Text(
+                    description,
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+        }
+    }
+}

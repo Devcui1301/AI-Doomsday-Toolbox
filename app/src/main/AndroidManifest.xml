@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="29" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- Android 13+ media permissions would go here if targeting specific media, but for GGUF/PDF we might need SAF or generic file access -->
+    
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    
+    <application
+        android:name=".LlamaApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LlamaDroid"
+        android:extractNativeLibs="true"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.LlamaDroid">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            
+            <!-- Share intent filters -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="video/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="audio/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="application/pdf" />
+            </intent-filter>
+        </activity>
+
+        <service 
+            android:name=".service.LlamaService" 
+            android:foregroundServiceType="dataSync" 
+            android:exported="false" />
+            
+        <service 
+            android:name=".service.SDEnvironmentService" 
+            android:foregroundServiceType="dataSync" 
+            android:exported="false" />
+            
+        <service 
+            android:name=".service.DownloadService" 
+            android:foregroundServiceType="dataSync" 
+            android:exported="false" />
+            
+        <service 
+            android:name=".service.SDService" 
+            android:foregroundServiceType="dataSync" 
+            android:exported="false" />
+            
+        <service 
+            android:name=".service.WhisperService" 
+            android:foregroundServiceType="dataSync" 
+            android:exported="false" />
+            
+        <service 
+            android:name=".service.VideoUpscalerService" 
+            android:foregroundServiceType="dataSync" 
+            android:exported="false" />
+            
+        <service 
+            android:name=".service.ModelShareService" 
+            android:foregroundServiceType="dataSync" 
+            android:exported="false" />
+            
+        <service 
+            android:name=".service.FileServerService" 
+            android:foregroundServiceType="dataSync" 
+            android:exported="false" />
+            
+        <service 
+            android:name=".service.ZimShareService" 
+            android:foregroundServiceType="dataSync" 
+            android:exported="false" />
+            
+        <service 
+            android:name=".service.KiwixService" 
+            android:foregroundServiceType="dataSync" 
+            android:exported="false" />
+            
+        <!-- Receiver for completed ZIM downloads - must be exported for DOWNLOAD_COMPLETE -->
+        <receiver
+            android:name=".service.ZimDownloadReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+            </intent-filter>
+        </receiver>
+            
+        <!-- FileProvider for sharing generated images -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+            
+    </application>
+
+</manifest>

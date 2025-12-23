@@ -1,0 +1,462 @@
+<resources>
+    <!-- App Name -->
+    <string name="app_name">AI Doomsday Toolbox</string>
+    
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_ai">AI</string>
+    <string name="nav_notes">Notes</string>
+    <string name="nav_models">Models</string>
+    <string name="nav_settings">Settings</string>
+    
+    <!-- Dashboard -->
+    <string name="dashboard_title">Dashboard</string>
+    <string name="dashboard_llm_server">LLM Server</string>
+    <string name="dashboard_start_llamacpp">Start LlamaCpp</string>
+    <string name="dashboard_stop_server">Stop Server</string>
+    <string name="dashboard_starting">Starting…</string>
+    <string name="dashboard_server_running">Server running on port %d</string>
+    <string name="dashboard_no_model">No model selected</string>
+    <string name="dashboard_select_model">Select a model in LLM Settings</string>
+    <string name="dashboard_quick_actions">Quick Actions</string>
+    <string name="dashboard_system_status">System Status</string>
+    <string name="dashboard_cpu">CPU</string>
+    <string name="dashboard_memory">Memory</string>
+    <string name="dashboard_storage">Storage</string>
+    
+    <!-- AI Hub -->
+    <string name="ai_hub_title">AI Tools</string>
+    <string name="ai_hub_subtitle">Your local AI assistant</string>
+    <string name="ai_chat">Chat</string>
+    <string name="ai_chat_desc">Talk with AI models</string>
+    <string name="ai_image_gen">Image Generation</string>
+    <string name="ai_image_gen_desc">Create with Stable Diffusion</string>
+    <string name="ai_transcription">Audio Transcription</string>
+    <string name="ai_transcription_desc">Transcribe with Whisper</string>
+    <string name="ai_video_sumup">Video Summary</string>
+    <string name="ai_video_sumup_desc">AI video analysis</string>
+    <string name="ai_pdf_tools">PDF Toolbox</string>
+    <string name="ai_pdf_tools_desc">OCR and summarization</string>
+    <string name="ai_video_upscaler">Video Upscaler</string>
+    <string name="ai_video_upscaler_desc">Enhance video quality</string>
+    
+    <!-- Chat Screen -->
+    <string name="chat_title">Chat</string>
+    <string name="chat_placeholder">Type a message…</string>
+    <string name="chat_send">Send</string>
+    <string name="chat_clear">Clear chat</string>
+    <string name="chat_copy">Copy</string>
+    <string name="chat_regenerate">Regenerate</string>
+    <string name="chat_stop_generating">Stop generating</string>
+    <string name="chat_thinking">Thinking…</string>
+    <string name="chat_no_model">No model loaded</string>
+    <string name="chat_load_model">Please select a model in settings</string>
+    <string name="chat_attach_image">Attach image</string>
+    <string name="chat_vision_mode">Vision mode</string>
+    
+    <!-- Image Generation -->
+    <string name="imagegen_title">Image Generation</string>
+    <string name="imagegen_prompt">Prompt</string>
+    <string name="imagegen_prompt_hint">Describe the image you want to create…</string>
+    <string name="imagegen_negative_prompt">Negative prompt</string>
+    <string name="imagegen_negative_hint">What to avoid…</string>
+    <string name="imagegen_generate">Generate</string>
+    <string name="imagegen_generating">Generating…</string>
+    <string name="imagegen_enhance_prompt">Enhance prompt with AI</string>
+    <string name="imagegen_steps">Steps</string>
+    <string name="imagegen_cfg_scale">CFG Scale</string>
+    <string name="imagegen_seed">Seed</string>
+    <string name="imagegen_random_seed">Random</string>
+    <string name="imagegen_resolution">Resolution</string>
+    <string name="imagegen_save">Save image</string>
+    <string name="imagegen_share">Share</string>
+    <string name="imagegen_mode_txt2img">Text to Image</string>
+    <string name="imagegen_mode_img2img">Image to Image</string>
+    <string name="imagegen_mode_upscale">Upscale</string>
+    <string name="imagegen_strength">Strength</string>
+    <string name="imagegen_upscale_factor">Upscale factor</string>
+    <string name="imagegen_no_model">No SD model selected</string>
+    <string name="imagegen_select_model">Select model in settings</string>
+    <string name="imagegen_progress">Progress: %d%%</string>
+    <string name="imagegen_select_image">Select Image</string>
+    <string name="imagegen_cancel">Cancel</string>
+    <string name="imagegen_gallery">Gallery</string>
+    <string name="imagegen_advanced">Advanced Options</string>
+    <string name="imagegen_lora">LoRA</string>
+    <string name="imagegen_select_lora">Select LoRA</string>
+    <string name="imagegen_width">Width</string>
+    <string name="imagegen_height">Height</string>
+    <string name="imagegen_memory_opt">Memory Optimization</string>
+    <string name="imagegen_vae_tiling">VAE Tiling</string>
+    <string name="imagegen_tile_overlap">Tile Overlap</string>
+    <string name="imagegen_tile_size">Tile Size</string>
+    <string name="imagegen_relative_tile_size">Relative Tile Size</string>
+    <string name="imagegen_tensor_type_rules">Tensor Type Rules</string>
+    <string name="imagegen_export_to_folder">Export to Folder</string>
+    <string name="imagegen_export_success">Exported to %s</string>
+    <string name="imagegen_export_fail">Export failed: %s</string>
+    <string name="imagegen_vae_gguf_note">Note: GGUF VAEs are recommended for lower RAM usage.</string>
+    
+    <!-- Audio Transcription -->
+    <string name="whisper_title">Audio Transcription</string>
+    <string name="whisper_select_file">Select audio file</string>
+    <string name="whisper_record">Record</string>
+    <string name="whisper_stop_recording">Stop recording</string>
+    <string name="whisper_transcribe">Transcribe</string>
+    <string name="whisper_transcribing">Transcribing…</string>
+    <string name="whisper_no_model">No Whisper model selected</string>
+    <string name="whisper_result">Transcription result</string>
+    <string name="whisper_copy">Copy text</string>
+    <string name="whisper_save">Save to file</string>
+    <string name="whisper_language">Language</string>
+    <string name="whisper_auto_detect">Auto-detect</string>
+    
+    <!-- Video Summary -->
+    <string name="video_sumup_title">Video Summary</string>
+    <string name="video_sumup_select">Select video</string>
+    <string name="video_sumup_analyze">Analyze video</string>
+    <string name="video_sumup_analyzing">Analyzing…</string>
+    <string name="video_sumup_frames">Extracting frames…</string>
+    <string name="video_sumup_summary">Summary</string>
+    
+    <!-- Video Upscaler -->
+    <string name="upscaler_title">Video Upscaler</string>
+    <string name="upscaler_select">Select video</string>
+    <string name="upscaler_start">Start upscaling</string>
+    <string name="upscaler_stop">Stop</string>
+    <string name="upscaler_progress">Progress: %d%%</string>
+    <string name="upscaler_processing">Processing frame %d of %d</string>
+    <string name="upscaler_complete">Upscaling complete!</string>
+    <string name="upscaler_scale">Scale</string>
+    <string name="upscaler_2x">2x</string>
+    <string name="upscaler_4x">4x</string>
+    
+    <!-- PDF Tools -->
+    <string name="pdf_title">PDF Tools</string>
+    <string name="pdf_select">Select PDF</string>
+    <string name="pdf_summary">Summary</string>
+    <string name="pdf_ocr">OCR</string>
+    <string name="pdf_processing">Processing…</string>
+    <string name="pdf_pages">%d pages</string>
+    <string name="pdf_extract_text">Extract text</string>
+    <string name="pdf_summarize">Summarize with AI</string>
+    
+    <!-- Model Hub -->
+    <string name="models_hub">Model Hub</string>
+    <string name="models_download">Download Models</string>
+    <string name="models_installed">Installed Models</string>
+    <string name="models_share">Share Models</string>
+    <string name="models_import">Import Model</string>
+    <string name="models_llm">LLM Models</string>
+    <string name="models_llm_desc">Download, manage, and select chat models for AI conversations</string>
+    <string name="models_sd">Stable Diffusion</string>
+    <string name="models_sd_desc">Download checkpoints, VAE, LoRA for image generation</string>
+    <string name="models_whisper">Whisper Models</string>
+    <string name="models_whisper_desc">Download speech recognition models for transcription</string>
+    <string name="models_share_desc">Share your models with other devices via WiFi</string>
+    <string name="models_size">Size: %s</string>
+    <string name="models_delete">Delete model</string>
+    <string name="models_delete_confirm">Are you sure you want to delete this model?</string>
+    <string name="models_downloading">Downloading…</string>
+    <string name="models_no_models">No models installed</string>
+    <string name="models_browse">Browse available models</string>
+    <string name="models_local_storage">All models are stored locally on your device</string>
+    <string name="models_import_title">Importing Model</string>
+    <string name="models_import_wait">Please wait, copying file…</string>
+    
+    <!-- Model Share -->
+    <string name="share_title">Share Models</string>
+    <string name="share_server_running">Server Running</string>
+    <string name="share_server_stopped">Server Stopped</string>
+    <string name="share_start_server">Start Server</string>
+    <string name="share_stop_server">Stop Server</string>
+    <string name="share_scan_qr">Scan QR or open URL to download models</string>
+    <string name="share_interfaces">%d network interfaces available</string>
+    <string name="share_active_downloads">%d active download(s)</string>
+    <string name="share_no_models">No models available to share</string>
+    
+    <!-- Settings Hub -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_subtitle">Configure your AI tools</string>
+    <string name="settings_general">General</string>
+    <string name="settings_general_desc">Output, theme</string>
+    <string name="settings_llm">LLM / Chat</string>
+    <string name="settings_llm_desc">Threads, context</string>
+    <string name="settings_imagegen">Image Gen</string>
+    <string name="settings_imagegen_desc">SD, Enhancer</string>
+    <string name="settings_whisper">Whisper</string>
+    <string name="settings_whisper_desc">Transcription</string>
+    <string name="settings_upscaler">Upscaler</string>
+    <string name="settings_upscaler_desc">Video threads</string>
+    <string name="settings_pdf">PDF AI</string>
+    <string name="settings_pdf_desc">Summary model</string>
+    <string name="settings_prompts">Prompts</string>
+    <string name="settings_prompts_desc">System prompts</string>
+    <string name="settings_debug">Debug</string>
+    <string name="settings_debug_desc">Logs, binaries</string>
+    <string name="settings_about">About</string>
+    <string name="settings_about_desc">Credits, donate</string>
+    
+    <!-- General Settings -->
+    <string name="general_settings_title">General Settings</string>
+    <string name="general_output_folder">Output Folder</string>
+    <string name="general_output_default">Default (app internal storage)</string>
+    <string name="general_output_hint">Used for images, transcriptions, and upscaled videos</string>
+    <string name="general_theme">Theme</string>
+    <string name="general_theme_system">System default (follows device theme)</string>
+    <string name="general_theme_soon">Theme customization coming soon</string>
+    <string name="general_language">Language</string>
+    <string name="general_language_system">System Default</string>
+    <string name="general_language_en">English</string>
+    <string name="general_language_es">Español</string>
+    <string name="general_language_hint">App will restart to apply language change</string>
+    <string name="general_battery">Battery Optimization</string>
+    <string name="general_battery_unrestricted">Unrestricted - AI tasks continue when screen is off</string>
+    <string name="general_battery_restricted">Restricted - AI tasks may pause when screen is off</string>
+    <string name="general_battery_allow">Allow Unrestricted Battery</string>
+    <string name="general_battery_hint">Required for image/video AI processing to continue in background</string>
+    <string name="general_battery_ok">App can run AI tasks without interruption</string>
+    <string name="general_model_storage">Use External Storage</string>
+    <string name="general_model_storage_enabled">Enabled</string>
+    <string name="general_model_storage_disabled">Disabled</string>
+    <string name="general_model_storage_internal">📂 Internal app storage (deleted on uninstall)</string>
+    <string name="general_model_storage_external">📂 %s/models/</string>
+    <string name="general_model_storage_warning">⚠️ Note: Native AI binaries can only access app-specific directories. Custom folders are not supported on Android 11+.</string>
+    
+    <!-- LLM Settings -->
+    <string name="llm_settings_title">LLM Settings</string>
+    <string name="llm_model">Model</string>
+    <string name="llm_select_model">Select model</string>
+    <string name="llm_no_model">No model selected</string>
+    <string name="llm_context_size">Context Size</string>
+    <string name="llm_threads">Threads</string>
+    <string name="llm_temperature">Temperature</string>
+    <string name="llm_gpu_layers">GPU Layers</string>
+    <string name="llm_vision">Vision Mode</string>
+    <string name="llm_vision_model">Vision Projector</string>
+    <string name="llm_remote_access">Remote Access</string>
+    <string name="llm_remote_hint">Allow connections from other devices</string>
+    
+    <!-- Image Gen Settings -->
+    <string name="imagegen_settings_title">Image Gen Settings</string>
+    <string name="imagegen_sd_model">SD Model</string>
+    <string name="imagegen_vae">VAE</string>
+    <string name="imagegen_clip_skip">CLIP Skip</string>
+    <string name="imagegen_sampler">Sampler</string>
+    <string name="imagegen_scheduler">Scheduler</string>
+    <string name="imagegen_enhancer">Prompt Enhancer</string>
+    <string name="imagegen_enhancer_model">Enhancer Model</string>
+    
+    <!-- Whisper Settings -->
+    <string name="whisper_settings_title">Whisper Settings</string>
+    <string name="whisper_model">Whisper Model</string>
+    <string name="whisper_threads">Threads</string>
+    <string name="whisper_translate">Translate to English</string>
+    
+    <!-- Upscaler Settings -->
+    <string name="upscaler_settings_title">Video Upscaler Settings</string>
+    <string name="upscaler_threads">Threads</string>
+    <string name="upscaler_model">Upscaler Model</string>
+    
+    <!-- PDF Settings -->
+    <string name="pdf_settings_title">PDF Settings</string>
+    <string name="pdf_model">Summary Model</string>
+    <string name="pdf_chunk_size">Chunk Size</string>
+    
+    <!-- System Prompts -->
+    <string name="prompts_title">System Prompts</string>
+    <string name="prompts_chat">Chat System Prompt</string>
+    <string name="prompts_enhancer">Prompt Enhancer</string>
+    <string name="prompts_pdf">PDF Summary</string>
+    
+    <!-- Logs/Debug -->
+    <string name="logs_title">Debug Logs</string>
+    <string name="logs_clear">Clear</string>
+    <string name="logs_export">Export</string>
+    <string name="logs_binaries">Binaries</string>
+    <string name="logs_copy">Copy All</string>
+    
+    <!-- Notes -->
+    <string name="notes_title">Notes</string>
+    <string name="notes_new">New note</string>
+    <string name="notes_delete">Delete</string>
+    <string name="notes_no_notes">No notes yet</string>
+    <string name="notes_hint">Tap + to create a note</string>
+    
+    <!-- Common Actions -->
+    <string name="action_start">Start</string>
+    <string name="action_stop">Stop</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_save">Save</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_back">Back</string>
+    <string name="action_next">Next</string>
+    <string name="action_done">Done</string>
+    <string name="action_skip">Skip</string>
+    <string name="action_change">Change</string>
+    <string name="action_reset">Reset</string>
+    <string name="action_select">Select</string>
+    <string name="action_copy">Copy</string>
+    <string name="action_share">Share</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_confirm">Confirm</string>
+    <string name="action_retry">Retry</string>
+    <string name="action_close">Close</string>
+    <string name="action_download">Download</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_open">Open</string>
+    
+    <!-- Status Messages -->
+    <string name="status_loading">Loading…</string>
+    <string name="status_processing">Processing…</string>
+    <string name="status_complete">Complete</string>
+    <string name="status_error">Error</string>
+    <string name="status_downloading">Downloading…</string>
+    <string name="status_ready">Ready</string>
+    <string name="status_idle">Idle</string>
+    <string name="status_running">Running</string>
+    <string name="status_stopped">Stopped</string>
+    
+    <!-- Welcome Screen -->
+    <string name="welcome_title">Welcome to AI Doomsday Toolbox</string>
+    <string name="welcome_subtitle">Your offline AI companion</string>
+    <string name="welcome_feature_chat">💬 Chat with AI models locally</string>
+    <string name="welcome_feature_image">🎨 Generate images with Stable Diffusion &amp; FLUX</string>
+    <string name="welcome_feature_audio">🎙️ Transcribe audio with Whisper</string>
+    <string name="welcome_feature_video">📹 Summarize videos with AI</string>
+    <string name="welcome_feature_pdf">📄 Process PDFs with OCR and AI</string>
+    <string name="welcome_feature_upscale">🔍 Upscale images with RealESRGAN</string>
+    <string name="welcome_feature_wikipedia">📚 Browse Wikipedia offline (Kiwix)</string>
+    <string name="welcome_feature_share">📤 Share models &amp; files over LAN</string>
+    <string name="welcome_permissions_title">Setup Required</string>
+    <string name="welcome_battery_title">Battery Optimization</string>
+    <string name="welcome_battery_desc">Allow unrestricted battery usage so AI tasks can run in the background</string>
+    <string name="welcome_battery_allow">Allow Unrestricted</string>
+    <string name="welcome_battery_enabled">Unrestricted battery usage enabled</string>
+    <string name="welcome_folder_title">Output Folder</string>
+    <string name="welcome_folder_desc">Choose where to save generated images, transcriptions, and videos</string>
+    <string name="welcome_folder_select">Select Folder</string>
+    <string name="welcome_folder_selected">Output folder selected</string>
+    <string name="welcome_folder_skip">You can skip this and change it later in Settings</string>
+    <string name="welcome_ready">You\'re all set!</string>
+    <string name="welcome_get_started">Get Started</string>
+    
+    <!-- About Screen -->
+    <string name="about_title">About</string>
+    <string name="about_version">Version</string>
+    <string name="about_developer">Developer</string>
+    <string name="about_developer_name">ManuXD32</string>
+    <string name="about_github">GitHub</string>
+    <string name="about_support">Support Development</string>
+    <string name="about_kofi">Buy me a coffee on Ko-fi</string>
+    <string name="about_paypal">Donate via PayPal</string>
+    <string name="about_libraries">Open Source Libraries</string>
+    <string name="about_libraries_desc">This app uses the following open source projects:</string>
+    <string name="about_llama_cpp">llama.cpp - LLM inference</string>
+    <string name="about_whisper_cpp">whisper.cpp - Audio transcription</string>
+    <string name="about_stable_diffusion">stable-diffusion.cpp - Image generation</string>
+    <string name="about_ffmpeg">FFmpeg - Media processing</string>
+    <string name="about_thanks">Thank you for using Doomsday AI Toolbox!</string>
+    
+    <!-- Errors -->
+    <string name="error_generic">Something went wrong</string>
+    <string name="error_no_permission">Permission required</string>
+    <string name="error_file_not_found">File not found</string>
+    <string name="error_network">Network error</string>
+    <string name="error_model_load">Failed to load model</string>
+    
+    <!-- Remote Access -->
+    <string name="remote_access">Remote Access</string>
+    <string name="remote_access_enabled">Server accessible from other devices (0.0.0.0)</string>
+    <string name="remote_access_disabled">Local only (127.0.0.1)</string>
+    
+    <!-- KV Cache -->
+    <string name="kv_cache_title">KV Cache Quantization</string>
+    <string name="kv_cache_desc">Reduce memory for larger contexts</string>
+    <string name="kv_cache_reuse">Cache Reuse Tokens</string>
+    
+    <!-- File Server -->
+    <string name="file_server">File Server</string>
+    <string name="file_server_shared_folder">Shared Folder</string>
+    <string name="file_server_not_selected">Not selected</string>
+    <string name="file_server_browse">Browse</string>
+    <string name="file_server_start">Start Server (Port 9111)</string>
+    <string name="file_server_stop">Stop Server</string>
+    <string name="file_server_download_zip">Download as ZIP</string>
+    
+    <!-- QR Codes -->
+    <string name="qr_connect">Connect via QR</string>
+    <string name="qr_scan_files">Scan to access files</string>
+    
+    <!-- Prompt Enhancer -->
+    <string name="enhancer_enhancing">Enhancing prompt…</string>
+    
+    <!-- Kiwix Offline Library -->
+    <string name="kiwix_title">Kiwix Offline Library</string>
+    <string name="kiwix_lan_access">LAN Access</string>
+    <string name="kiwix_lan_enabled">Other devices can access library</string>
+    <string name="kiwix_lan_disabled">Local only</string>
+    <string name="kiwix_lan_hint">Enable to allow other devices on your network to access the Kiwix offline library</string>
+    <string name="kiwix_server">Kiwix Server</string>
+    <string name="kiwix_start">Start Kiwix (Port 8888)</string>
+    <string name="kiwix_stop">Stop Kiwix</string>
+    <string name="kiwix_sharing">Sharing ZIM Files</string>
+    <string name="kiwix_stopped">ZIM File Server</string>
+    <string name="kiwix_available">%d ZIM file(s) available for download</string>
+    <string name="kiwix_installed">Installed</string>
+    <string name="kiwix_catalog">Catalog</string>
+    <string name="kiwix_downloads">Downloads</string>
+    <string name="kiwix_share">Share</string>
+    <string name="kiwix_zim_share_port">Start File Server (Port 8087)</string>
+    <string name="kiwix_scan_download">Scan to Download ZIM Files</string>
+    <string name="kiwix_open_url_download">Open any URL in a browser to download ZIM files</string>
+    <string name="kiwix_share_hint">Share ZIM files with other devices on your network. They can download files directly from this device.</string>
+    <string name="kiwix_active_downloads">%d active download(s)</string>
+    
+    <!-- Dashboard Additional -->
+    <string name="dashboard_connect_qr">Connect via QR</string>
+    <string name="dashboard_file_server">File Server</string>
+    <string name="dashboard_shared_folder">Shared Folder</string>
+    <string name="dashboard_scan_access_files">Scan to access files</string>
+    <string name="dashboard_stop_server_btn">Stop Server</string>
+    <string name="dashboard_start_server_port">Start Server (Port %d)</string>
+    
+    <!-- Model Import/Management -->
+    <string name="model_import_title">Import Model</string>
+    <string name="model_file_label">File: %s</string>
+    <string name="model_type_label">Model Type:</string>
+    <string name="model_capabilities">Capabilities:</string>
+    <string name="model_vision_support">Vision Support (VLM)</string>
+    <string name="model_embedding">Embedding Model</string>
+    <string name="model_import_btn">Import</string>
+    <string name="model_rename_title">Rename Model</string>
+    <string name="model_new_name">New name</string>
+    <string name="model_rename_btn">Rename</string>
+    <string name="model_search_huggingface">Search HuggingFace...</string>
+    
+    <!-- Settings Additional -->
+    <string name="settings_output_folder">Output Folder</string>
+    <string name="settings_theme">Theme</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_battery_title">Battery Optimization</string>
+    <string name="settings_kiwix_title">Kiwix Offline Library</string>
+    <string name="settings_threads">Threads</string>
+    <string name="settings_context">Context Size</string>
+    
+    <!-- Common Dialog Actions -->
+    <string name="dialog_open_with">Open with...</string>
+    <string name="dialog_create">Create</string>
+    <string name="dialog_skip">Skip</string>
+    <string name="dialog_download">Download</string>
+    
+    <!-- Knowledge Base -->
+    <string name="kb_add_documents">Add Documents</string>
+    <string name="kb_new_title">New Knowledge Base</string>
+    <string name="kb_name_label">Name</string>
+    
+    <!-- Whisper Models -->
+    <string name="whisper_models_title">Whisper Models</string>
+    <string name="whisper_cpp_models">WhisperCPP Models</string>
+    <string name="whisper_english_only">EN</string>
+    <string name="whisper_quantized">Q</string>
+</resources>

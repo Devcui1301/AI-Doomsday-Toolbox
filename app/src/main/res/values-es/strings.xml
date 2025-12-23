@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Name (keep English) -->
+    <string name="app_name">AI Doomsday Toolbox</string>
+    
+    <!-- Navigation -->
+    <string name="nav_home">Inicio</string>
+    <string name="nav_ai">IA</string>
+    <string name="nav_notes">Notas</string>
+    <string name="nav_models">Modelos</string>
+    <string name="nav_settings">Ajustes</string>
+    
+    <!-- Dashboard -->
+    <string name="dashboard_title">Panel</string>
+    <string name="dashboard_llm_server">Servidor LLM</string>
+    <string name="dashboard_start_llamacpp">Iniciar Servidor</string>
+    <string name="dashboard_stop_server">Detener</string>
+    <string name="dashboard_starting">Iniciando…</string>
+    <string name="dashboard_server_running">Puerto %d activo</string>
+    <string name="dashboard_no_model">Sin modelo</string>
+    <string name="dashboard_select_model">Ve a Modelos para descargar uno</string>
+    <string name="dashboard_quick_actions">Acciones</string>
+    <string name="dashboard_system_status">Sistema</string>
+    <string name="dashboard_cpu">CPU</string>
+    <string name="dashboard_memory">Memoria RAM</string>
+    <string name="dashboard_storage">Almacenamiento</string>
+    
+    <!-- AI Hub -->
+    <string name="ai_hub_title">Herramientas IA</string>
+    <string name="ai_hub_subtitle">Inferencia IA en tu dispositivo</string>
+    <string name="ai_chat">Chat IA</string>
+    <string name="ai_chat_desc">Conversa con modelos LLM</string>
+    <string name="ai_image_gen">Generar Imagen</string>
+    <string name="ai_image_gen_desc">Stable Diffusion local</string>
+    <string name="ai_transcription">Transcribir</string>
+    <string name="ai_transcription_desc">Audio a texto (Whisper)</string>
+    <string name="ai_video_sumup">Resumen Video</string>
+    <string name="ai_video_sumup_desc">Whisper + resumen LLM</string>
+    <string name="ai_pdf_tools">PDF IA</string>
+    <string name="ai_pdf_tools_desc">Unir, dividir, resumir</string>
+    <string name="ai_video_upscaler">Escalar Video</string>
+    <string name="ai_video_upscaler_desc">Mejora resolución con IA</string>
+    
+    <!-- Chat Screen -->
+    <string name="chat_title">Chat</string>
+    <string name="chat_placeholder">Escribe un mensaje…</string>
+    <string name="chat_send">Enviar</string>
+    <string name="chat_clear">Recargar chat</string>
+    <string name="chat_copy">Copiar</string>
+    <string name="chat_regenerate">Regenerar</string>
+    <string name="chat_stop_generating">Detener</string>
+    <string name="chat_thinking">Pensando…</string>
+    <string name="chat_no_model">Servidor no activo</string>
+    <string name="chat_load_model">Inicia el servidor desde Inicio</string>
+    <string name="chat_attach_image">Adjuntar imagen</string>
+    <string name="chat_vision_mode">Modo visión</string>
+    
+    <!-- Image Generation -->
+    <string name="imagegen_title">Generador de Imágenes</string>
+    <string name="imagegen_prompt">Prompt</string>
+    <string name="imagegen_prompt_hint">Describe la imagen…</string>
+    <string name="imagegen_negative_prompt">Prompt negativo</string>
+    <string name="imagegen_negative_hint">Qué evitar…</string>
+    <string name="imagegen_generate">Generar</string>
+    <string name="imagegen_generating">Generando…</string>
+    <string name="imagegen_enhance_prompt">Mejorar con IA</string>
+    <string name="imagegen_steps">Pasos</string>
+    <string name="imagegen_cfg_scale">CFG</string>
+    <string name="imagegen_seed">Semilla</string>
+    <string name="imagegen_random_seed">Aleatorio</string>
+    <string name="imagegen_resolution">Resolución</string>
+    <string name="imagegen_save">Guardar</string>
+    <string name="imagegen_share">Compartir</string>
+    <string name="imagegen_mode_txt2img">Texto→Imagen</string>
+    <string name="imagegen_mode_img2img">Imagen→Imagen</string>
+    <string name="imagegen_mode_upscale">Escalar</string>
+    <string name="imagegen_strength">Fuerza</string>
+    <string name="imagegen_upscale_factor">Factor</string>
+    <string name="imagegen_no_model">Sin modelo SD</string>
+    <string name="imagegen_select_model">Selecciona en Modelos</string>
+    <string name="imagegen_progress">%d%%</string>
+    <string name="imagegen_sampler">Sampler</string>
+    <string name="imagegen_cancel">Cancelar</string>
+    <string name="imagegen_gallery">Galería</string>
+    <string name="imagegen_select_image">Seleccionar imagen</string>
+    <string name="imagegen_advanced">Opciones avanzadas</string>
+    <string name="imagegen_lora">LoRA</string>
+    <string name="imagegen_select_lora">Seleccionar LoRA</string>
+    <string name="imagegen_width">Ancho</string>
+    <string name="imagegen_height">Alto</string>
+    <string name="imagegen_memory_opt">Optimización de Memoria</string>
+    <string name="imagegen_vae_tiling">VAE Tiling</string>
+    <string name="imagegen_tile_overlap">Solapamiento de Mosaico</string>
+    <string name="imagegen_tile_size">Tamaño de Mosaico</string>
+    <string name="imagegen_relative_tile_size">Tamaño de Mosaico Relativo</string>
+    <string name="imagegen_tensor_type_rules">Reglas de Tipo de Tensor</string>
+    <string name="imagegen_export_to_folder">Exportar a Carpeta</string>
+    <string name="imagegen_export_success">Exportado a %s</string>
+    <string name="imagegen_export_fail">Fallo al exportar: %s</string>
+    <string name="imagegen_vae_gguf_note">Nota: Se recomiendan VAEs GGUF para menor uso de RAM.</string>
+    
+    <!-- Audio Transcription -->
+    <string name="whisper_title">Transcripción</string>
+    <string name="whisper_select_file">Seleccionar audio</string>
+    <string name="whisper_record">Grabar</string>
+    <string name="whisper_stop_recording">Detener</string>
+    <string name="whisper_transcribe">Transcribir</string>
+    <string name="whisper_transcribing">Transcribiendo…</string>
+    <string name="whisper_no_model">Sin modelo Whisper</string>
+    <string name="whisper_result">Resultado</string>
+    <string name="whisper_copy">Copiar</string>
+    <string name="whisper_save">Guardar</string>
+    <string name="whisper_language">Idioma</string>
+    <string name="whisper_auto_detect">Auto-detectar</string>
+    <string name="whisper_recording">Grabando…</string>
+    <string name="whisper_processing">Procesando…</string>
+    <string name="whisper_save_note">Guardar en notas</string>
+    
+    <!-- Video Summary -->
+    <string name="video_sumup_title">Resumen de Video</string>
+    <string name="video_sumup_select">Seleccionar video</string>
+    <string name="video_sumup_analyze">Analizar</string>
+    <string name="video_sumup_analyzing">Analizando…</string>
+    <string name="video_sumup_frames">Extrayendo audio…</string>
+    <string name="video_sumup_summary">Resumen</string>
+    <string name="video_sumup_transcript">Transcripción</string>
+    <string name="video_sumup_cancel">Cancelar</string>
+    <string name="video_sumup_no_model">Se requiere Whisper y LLM</string>
+    
+    <!-- Video Upscaler -->
+    <string name="upscaler_title">Escalador de Video</string>
+    <string name="upscaler_select">Seleccionar video</string>
+    <string name="upscaler_start">Iniciar</string>
+    <string name="upscaler_stop">Detener</string>
+    <string name="upscaler_progress">%d%%</string>
+    <string name="upscaler_processing">Frame %d/%d</string>
+    <string name="upscaler_complete">¡Completado!</string>
+    <string name="upscaler_scale">Escala</string>
+    <string name="upscaler_2x">2x</string>
+    <string name="upscaler_4x">4x</string>
+    <string name="upscaler_no_model">Sin modelo de escalado</string>
+    <string name="upscaler_extracting">Extrayendo frames…</string>
+    <string name="upscaler_encoding">Codificando video…</string>
+    
+    <!-- PDF Tools -->
+    <string name="pdf_title">Herramientas PDF</string>
+    <string name="pdf_select">Seleccionar PDF</string>
+    <string name="pdf_summary">Resumen</string>
+    <string name="pdf_ocr">OCR</string>
+    <string name="pdf_processing">Procesando…</string>
+    <string name="pdf_pages">%d páginas</string>
+    <string name="pdf_extract_text">Extraer texto</string>
+    <string name="pdf_summarize">Resumir con IA</string>
+    <string name="pdf_merge">Unir PDFs</string>
+    <string name="pdf_split">Dividir PDF</string>
+    <string name="pdf_no_model">Sin modelo LLM para resumen</string>
+    
+    <!-- Model Hub -->
+    <string name="models_hub">Centro de Modelos</string>
+    <string name="models_download">Descargar</string>
+    <string name="models_installed">Instalados</string>
+    <string name="models_share">Compartir</string>
+    <string name="models_import">Importar</string>
+    <string name="models_llm">Modelos LLM</string>
+    <string name="models_llm_desc">Descarga y gestiona modelos para chat con IA</string>
+    <string name="models_sd">Modelos SD</string>
+    <string name="models_sd_desc">Descarga checkpoints, VAE, LoRA para imágenes</string>
+    <string name="models_whisper">Modelos Whisper</string>
+    <string name="models_whisper_desc">Descarga modelos para transcripción de audio</string>
+    <string name="models_share_desc">Comparte tus modelos con otros dispositivos</string>
+    <string name="models_size">%s</string>
+    <string name="models_delete">Eliminar</string>
+    <string name="models_delete_confirm">¿Eliminar este modelo?</string>
+    <string name="models_downloading">Descargando…</string>
+    <string name="models_no_models">Sin modelos</string>
+    <string name="models_browse">Explorar disponibles</string>
+    <string name="models_select">Seleccionar</string>
+    <string name="models_selected">Seleccionado</string>
+    <string name="models_cancel_download">Cancelar descarga</string>
+    <string name="models_local_storage">Los modelos se guardan localmente</string>
+    <string name="models_import_title">Importando Modelo</string>
+    <string name="models_import_wait">Por favor espera, copiando archivo…</string>
+    
+    <!-- Model Share -->
+    <string name="share_title">Compartir Modelos</string>
+    <string name="share_server_running">Servidor activo</string>
+    <string name="share_server_stopped">Servidor detenido</string>
+    <string name="share_start_server">Iniciar</string>
+    <string name="share_stop_server">Detener</string>
+    <string name="share_scan_qr">Comparte modelos vía WiFi</string>
+    <string name="share_interfaces">%d redes</string>
+    <string name="share_active_downloads">%d descarga(s)</string>
+    <string name="share_no_models">Sin modelos para compartir</string>
+    
+    <!-- Settings Hub -->
+    <string name="settings_title">Ajustes</string>
+    <string name="settings_subtitle">Configura la IA</string>
+    <string name="settings_general">General</string>
+    <string name="settings_general_desc">Carpeta, tema, idioma</string>
+    <string name="settings_llm">LLM / Chat</string>
+    <string name="settings_llm_desc">Modelo, hilos, contexto</string>
+    <string name="settings_imagegen">Imágenes</string>
+    <string name="settings_imagegen_desc">Modelo SD, sampler</string>
+    <string name="settings_whisper">Whisper</string>
+    <string name="settings_whisper_desc">Modelo, idioma</string>
+    <string name="settings_upscaler">Escalador</string>
+    <string name="settings_upscaler_desc">Modelo, hilos</string>
+    <string name="settings_pdf">PDF IA</string>
+    <string name="settings_pdf_desc">Modelo, prompts</string>
+    <string name="settings_prompts">Prompts</string>
+    <string name="settings_prompts_desc">Prompts del sistema</string>
+    <string name="settings_debug">Depuración</string>
+    <string name="settings_debug_desc">Logs, binarios</string>
+    <string name="settings_about">Acerca de</string>
+    <string name="settings_about_desc">Créditos, donar</string>
+    
+    <!-- General Settings -->
+    <string name="general_settings_title">Ajustes Generales</string>
+    <string name="general_output_folder">Carpeta de Salida</string>
+    <string name="general_output_default">Almacenamiento interno</string>
+    <string name="general_output_hint">Para imágenes, transcripciones y videos</string>
+    <string name="general_theme">Tema</string>
+    <string name="general_theme_system">Sistema</string>
+    <string name="general_theme_soon">Próximamente</string>
+    <string name="general_language">Idioma</string>
+    <string name="general_language_system">Sistema</string>
+    <string name="general_language_en">English</string>
+    <string name="general_language_es">Español</string>
+    <string name="general_language_hint">La app se reiniciará</string>
+    <string name="general_battery">Batería</string>
+    <string name="general_battery_unrestricted">Sin restricciones</string>
+    <string name="general_battery_restricted">Restringido</string>
+    <string name="general_battery_allow">Permitir sin restricciones</string>
+    <string name="general_battery_hint">Requerido para IA en segundo plano</string>
+    <string name="general_battery_ok">IA puede ejecutar sin interrupciones</string>
+    <string name="general_model_storage">Usar Almacenamiento Externo</string>
+    <string name="general_model_storage_enabled">Activado</string>
+    <string name="general_model_storage_disabled">Desactivado</string>
+    <string name="general_model_storage_internal">📂 Almacenamiento interno (se borra al desinstalar)</string>
+    <string name="general_model_storage_external">📂 %s/models/</string>
+    <string name="general_model_storage_warning">⚠️ Nota: Los binarios de IA solo pueden acceder a directorios de la app. Carpetas personalizadas no son soportadas en Android 11+.</string>
+    
+    <!-- LLM Settings -->
+    <string name="llm_settings_title">Ajustes LLM</string>
+    <string name="llm_model">Modelo</string>
+    <string name="llm_select_model">Seleccionar</string>
+    <string name="llm_no_model">Ninguno</string>
+    <string name="llm_context_size">Contexto</string>
+    <string name="llm_threads">Hilos CPU</string>
+    <string name="llm_temperature">Temperatura</string>
+    <string name="llm_gpu_layers">Capas GPU</string>
+    <string name="llm_vision">Visión</string>
+    <string name="llm_vision_model">Proyector</string>
+    <string name="llm_remote_access">Acceso remoto</string>
+    <string name="llm_remote_hint">Conexiones desde otros dispositivos</string>
+    <string name="llm_port">Puerto</string>
+    <string name="llm_system_prompt">Prompt del sistema</string>
+    
+    <!-- Image Gen Settings -->
+    <string name="imagegen_settings_title">Ajustes Imágenes</string>
+    <string name="imagegen_sd_model">Modelo SD</string>
+    <string name="imagegen_vae">VAE</string>
+    <string name="imagegen_clip_skip">CLIP Skip</string>
+    <string name="imagegen_scheduler">Scheduler</string>
+    <string name="imagegen_enhancer">Mejorador</string>
+    <string name="imagegen_enhancer_model">Modelo LLM</string>
+    <string name="imagegen_threads">Hilos</string>
+    
+    <!-- Whisper Settings -->
+    <string name="whisper_settings_title">Ajustes Whisper</string>
+    <string name="whisper_model">Modelo</string>
+    <string name="whisper_threads">Hilos</string>
+    <string name="whisper_translate">Traducir a inglés</string>
+    
+    <!-- Upscaler Settings -->
+    <string name="upscaler_settings_title">Ajustes Escalador</string>
+    <string name="upscaler_threads">Hilos</string>
+    <string name="upscaler_model">Modelo</string>
+    
+    <!-- PDF Settings -->
+    <string name="pdf_settings_title">Ajustes PDF</string>
+    <string name="pdf_model">Modelo LLM</string>
+    <string name="pdf_chunk_size">Tamaño fragmento</string>
+    <string name="pdf_summary_prompt">Prompt resumen</string>
+    <string name="pdf_unification_prompt">Prompt unificación</string>
+    
+    <!-- System Prompts -->
+    <string name="prompts_title">Prompts del Sistema</string>
+    <string name="prompts_chat">Prompt Chat</string>
+    <string name="prompts_enhancer">Mejorador Prompt</string>
+    <string name="prompts_pdf">Resumen PDF</string>
+    <string name="prompts_reset">Restablecer</string>
+    
+    <!-- Logs/Debug -->
+    <string name="logs_title">Depuración</string>
+    <string name="logs_clear">Limpiar</string>
+    <string name="logs_export">Exportar</string>
+    <string name="logs_binaries">Binarios</string>
+    <string name="logs_copy">Copiar logs</string>
+    
+    <!-- Notes -->
+    <string name="notes_title">Notas</string>
+    <string name="notes_new">Nueva</string>
+    <string name="notes_delete">Eliminar</string>
+    <string name="notes_no_notes">Sin notas</string>
+    <string name="notes_hint">Toca + para crear</string>
+    <string name="notes_search">Buscar…</string>
+    <string name="notes_all">Todas</string>
+    <string name="notes_transcription">Transcripciones</string>
+    <string name="notes_summary">Resúmenes</string>
+    <string name="notes_manual">Manuales</string>
+    
+    <!-- Common Actions -->
+    <string name="action_start">Iniciar</string>
+    <string name="action_stop">Detener</string>
+    <string name="action_cancel">Cancelar</string>
+    <string name="action_save">Guardar</string>
+    <string name="action_delete">Eliminar</string>
+    <string name="action_back">Atrás</string>
+    <string name="action_next">Siguiente</string>
+    <string name="action_done">Hecho</string>
+    <string name="action_skip">Omitir</string>
+    <string name="action_change">Cambiar</string>
+    <string name="action_reset">Restablecer</string>
+    <string name="action_select">Seleccionar</string>
+    <string name="action_copy">Copiar</string>
+    <string name="action_share">Compartir</string>
+    <string name="action_edit">Editar</string>
+    <string name="action_confirm">Confirmar</string>
+    <string name="action_retry">Reintentar</string>
+    <string name="action_close">Cerrar</string>
+    <string name="action_refresh">Actualizar</string>
+    <string name="action_download">Descargar</string>
+    <string name="action_open">Abrir</string>
+    
+    <!-- Status Messages -->
+    <string name="status_loading">Cargando…</string>
+    <string name="status_processing">Procesando…</string>
+    <string name="status_complete">Completado</string>
+    <string name="status_error">Error</string>
+    <string name="status_downloading">Descargando…</string>
+    <string name="status_ready">Listo</string>
+    <string name="status_idle">Inactivo</string>
+    <string name="status_running">Servidor activo</string>
+    <string name="status_stopped">Servidor inactivo</string>
+    
+    <!-- Welcome Screen -->
+    <string name="welcome_title">Bienvenido</string>
+    <string name="welcome_subtitle">Tu IA sin conexión</string>
+    <string name="welcome_feature_chat">💬 Chat con modelos LLM</string>
+    <string name="welcome_feature_image">🎨 Genera imágenes con SD y FLUX</string>
+    <string name="welcome_feature_audio">🎙️ Transcribe con Whisper</string>
+    <string name="welcome_feature_video">📹 Resume videos con IA</string>
+    <string name="welcome_feature_pdf">📄 Procesa PDFs con OCR</string>
+    <string name="welcome_feature_upscale">🔍 Escala imágenes con RealESRGAN</string>
+    <string name="welcome_feature_wikipedia">📚 Wikipedia sin conexión (Kiwix)</string>
+    <string name="welcome_feature_share">📤 Comparte modelos por LAN</string>
+    <string name="welcome_permissions_title">Configuración</string>
+    <string name="welcome_battery_title">Batería</string>
+    <string name="welcome_battery_desc">Permite ejecución en segundo plano</string>
+    <string name="welcome_battery_allow">Permitir</string>
+    <string name="welcome_battery_enabled">Habilitado ✓</string>
+    <string name="welcome_folder_title">Carpeta de Salida</string>
+    <string name="welcome_folder_desc">Dónde guardar archivos generados</string>
+    <string name="welcome_folder_select">Seleccionar</string>
+    <string name="welcome_folder_selected">Seleccionada ✓</string>
+    <string name="welcome_folder_skip">Puedes cambiar después en Ajustes</string>
+    <string name="welcome_ready">¡Listo!</string>
+    <string name="welcome_get_started">Comenzar</string>
+    
+    <!-- About Screen -->
+    <string name="about_title">Acerca de</string>
+    <string name="about_version">Versión</string>
+    <string name="about_developer">Desarrollador</string>
+    <string name="about_developer_name">ManuXD32</string>
+    <string name="about_github">GitHub</string>
+    <string name="about_support">Apoyar</string>
+    <string name="about_kofi">Ko-fi</string>
+    <string name="about_paypal">PayPal</string>
+    <string name="about_libraries">Open Source</string>
+    <string name="about_libraries_desc">Proyectos usados:</string>
+    <string name="about_llama_cpp">llama.cpp - LLM</string>
+    <string name="about_whisper_cpp">whisper.cpp - Whisper</string>
+    <string name="about_stable_diffusion">stable-diffusion.cpp - SD</string>
+    <string name="about_ffmpeg">FFmpeg - Media</string>
+    <string name="about_thanks">¡Gracias por usar la app!</string>
+    
+    <!-- Errors -->
+    <string name="error_generic">Algo salió mal</string>
+    <string name="error_no_permission">Permiso requerido</string>
+    <string name="error_file_not_found">Archivo no encontrado</string>
+    <string name="error_network">Error de red</string>
+    <string name="error_model_load">Error al cargar modelo</string>
+    <string name="error_no_space">Sin espacio</string>
+    <string name="error_cancelled">Cancelado</string>
+    
+    <!-- Remote Access -->
+    <string name="remote_access">Acceso Remoto</string>
+    <string name="remote_access_enabled">Accesible desde otros dispositivos (0.0.0.0)</string>
+    <string name="remote_access_disabled">Solo local (127.0.0.1)</string>
+    
+    <!-- KV Cache -->
+    <string name="kv_cache_title">Cuantización KV Cache</string>
+    <string name="kv_cache_desc">Reduce memoria para contextos más grandes</string>
+    <string name="kv_cache_reuse">Tokens de Caché Reutilizados</string>
+    
+    <!-- File Server -->
+    <string name="file_server">Servidor de Archivos</string>
+    <string name="file_server_shared_folder">Carpeta Compartida</string>
+    <string name="file_server_not_selected">No seleccionada</string>
+    <string name="file_server_browse">Explorar</string>
+    <string name="file_server_start">Iniciar Servidor (Puerto 9111)</string>
+    <string name="file_server_stop">Detener Servidor</string>
+    <string name="file_server_download_zip">Descargar como ZIP</string>
+    
+    <!-- QR Codes -->
+    <string name="qr_connect">Conectar vía QR</string>
+    <string name="qr_scan_files">Escanear para acceder a archivos</string>
+    
+    <!-- Prompt Enhancer -->
+    <string name="enhancer_enhancing">Mejorando prompt…</string>
+    
+    <!-- Kiwix Offline Library -->
+    <string name="kiwix_title">Biblioteca Offline Kiwix</string>
+    <string name="kiwix_lan_access">Acceso LAN</string>
+    <string name="kiwix_lan_enabled">Otros dispositivos pueden acceder</string>
+    <string name="kiwix_lan_disabled">Solo local</string>
+    <string name="kiwix_lan_hint">Permite que otros dispositivos en tu red accedan a la biblioteca Kiwix</string>
+    <string name="kiwix_server">Servidor Kiwix</string>
+    <string name="kiwix_start">Iniciar Kiwix (Puerto 8888)</string>
+    <string name="kiwix_stop">Detener Kiwix</string>
+    <string name="kiwix_sharing">Compartiendo archivos ZIM</string>
+    <string name="kiwix_stopped">Servidor de archivos ZIM</string>
+    <string name="kiwix_available">%d archivo(s) ZIM disponibles</string>
+    <string name="kiwix_installed">Instalados</string>
+    <string name="kiwix_catalog">Catálogo</string>
+    <string name="kiwix_downloads">Descargas</string>
+    <string name="kiwix_share">Compartir</string>
+    <string name="kiwix_zim_share_port">Iniciar servidor (Puerto 8087)</string>
+    <string name="kiwix_scan_download">Escanear para descargar ZIM</string>
+    <string name="kiwix_open_url_download">Abre cualquier URL en un navegador para descargar archivos ZIM</string>
+    <string name="kiwix_share_hint">Comparte archivos ZIM con otros dispositivos. Pueden descargar directamente desde este dispositivo.</string>
+    <string name="kiwix_active_downloads">%d descarga(s) activa(s)</string>
+    
+    <!-- Dashboard Additional -->
+    <string name="dashboard_connect_qr">Conectar vía QR</string>
+    <string name="dashboard_file_server">Servidor de Archivos</string>
+    <string name="dashboard_shared_folder">Carpeta Compartida</string>
+    <string name="dashboard_scan_access_files">Escanear para acceder a archivos</string>
+    <string name="dashboard_stop_server_btn">Detener Servidor</string>
+    <string name="dashboard_start_server_port">Iniciar Servidor (Puerto %d)</string>
+    
+    <!-- Model Import/Management -->
+    <string name="model_import_title">Importar Modelo</string>
+    <string name="model_file_label">Archivo: %s</string>
+    <string name="model_type_label">Tipo de Modelo:</string>
+    <string name="model_capabilities">Capacidades:</string>
+    <string name="model_vision_support">Soporte de Visión (VLM)</string>
+    <string name="model_embedding">Modelo de Embeddings</string>
+    <string name="model_import_btn">Importar</string>
+    <string name="model_rename_title">Renombrar Modelo</string>
+    <string name="model_new_name">Nuevo nombre</string>
+    <string name="model_rename_btn">Renombrar</string>
+    <string name="model_search_huggingface">Buscar en HuggingFace...</string>
+    
+    <!-- Settings Additional -->
+    <string name="settings_output_folder">Carpeta de Salida</string>
+    <string name="settings_theme">Tema</string>
+    <string name="settings_language">Idioma</string>
+    <string name="settings_battery_title">Optimización de Batería</string>
+    <string name="settings_kiwix_title">Biblioteca Offline Kiwix</string>
+    <string name="settings_threads">Hilos</string>
+    <string name="settings_context">Tamaño de Contexto</string>
+    
+    <!-- Common Dialog Actions -->
+    <string name="dialog_open_with">Abrir con...</string>
+    <string name="dialog_create">Crear</string>
+    <string name="dialog_skip">Omitir</string>
+    <string name="dialog_download">Descargar</string>
+    
+    <!-- Knowledge Base -->
+    <string name="kb_add_documents">Añadir Documentos</string>
+    <string name="kb_new_title">Nueva Base de Conocimiento</string>
+    <string name="kb_name_label">Nombre</string>
+    
+    <!-- Whisper Models -->
+    <string name="whisper_models_title">Modelos Whisper</string>
+    <string name="whisper_cpp_models">Modelos WhisperCPP</string>
+    <string name="whisper_english_only">EN</string>
+    <string name="whisper_quantized">Q</string>
+</resources>
