@@ -120,7 +120,7 @@
 
 ### 📝 Notes
 - Create and manage notes
-- AI-powered note summarization
+- Automatic note creation for PDF and video summaries and for transcriptions
 - Markdown support
 
 <img src="https://github.com/user-attachments/assets/acb50b21-6079-42ed-9abc-925c64325b73" width="300"/>
